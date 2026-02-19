@@ -9,7 +9,17 @@ const app = express();
 const port = process.env.PORT || 4001;
 
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://note-taking-website-frontend.vercel.app"
+  ],
+  credentials: true
+}));
+app.get("/", (req, res) => {
+  res.send("Backend is running successfully 🚀");
+});
+
 
 app.use("/api/v1/noteapp", noteRoutes);
 
