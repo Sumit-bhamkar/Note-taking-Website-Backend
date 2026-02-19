@@ -1,8 +1,3 @@
-Here is a clean and professional **README.md** for your backend project 👇
-
-You can copy this into your backend root folder as `README.md`.
-
----
 
 # 📒 Note Taking App – Backend
 
