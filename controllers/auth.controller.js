@@ -53,7 +53,7 @@ export const login = async (req, res) => {
     const secret = process.env.JWT_SECRET || "change_this_secret";
     const token = jwt.sign({ userId: user.id }, secret, { expiresIn: "7d" });
 
-    res.status(200).json({ token });
+    res.status(200).json({ token, name: user.name, email: user.email });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
